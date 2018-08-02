@@ -111,8 +111,14 @@ namespace CRYPTIC
                     CMDR.TotalBounties = 0;
                     CMDR.ShipsDestroyed = 0;
                 }
+                
+                //NOT A GOOD IDEA?
+                if((string)obj["event"] == "FSDJump")
+                {
+                    CMDR.TotalBounties = 0;
+                    CMDR.ShipsDestroyed = 0;
+                }
 
-                //UPDATED CODE
                 if ((string)obj["event"] == "ShipTargeted")
                 {
                     if ((bool)obj["TargetLocked"])
@@ -159,7 +165,7 @@ namespace CRYPTIC
             }
             catch (Exception e)
             {
-                //Console.WriteLine(lineIndex + " - " + (string)obj["timestamp"]);
+                Console.WriteLine("#" + CMDR.lineIndex + " of " + CMDR.fileName + " | Event: " + (string)obj["event"]);
             }
         }
     }
