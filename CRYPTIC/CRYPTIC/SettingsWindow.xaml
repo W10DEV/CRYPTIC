@@ -5,44 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CRYPTIC"
         mc:Ignorable="d"
-        Title="Watcher - Settings" Height="95" Width="195" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize" AllowsTransparency="True">
+        Title="Watcher - Settings" Height="140" Width="250" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize" AllowsTransparency="True">
     <Window.Background>
-        <SolidColorBrush Opacity="0" Color="#0c0c0c"/>
+        <SolidColorBrush Opacity="0.6" Color="#0c0c0c"/>
     </Window.Background>
-    <Border BorderBrush="#0c0c0c" Background="#0c0c0c" CornerRadius="5,5,5,5" Opacity="1" BorderThickness="1,1,1,1">
-        <Grid>
-            <Image HorizontalAlignment="Left" VerticalAlignment="Top" Width="96" Height="21" Source="Images/Settings-UI1.png" Margin="20,35,0,0"/>
-            <Image HorizontalAlignment="Left" VerticalAlignment="Top" Width="96" Height="21" Source="Images/Settings-UI1.png" Margin="20,10,0,0"/>
+    <Grid>
+        <Label x:Name="JournalStatus" Content="DEFAULT" FontSize="10" Foreground="Lime" HorizontalAlignment="Left" Margin="68,10,0,0" VerticalAlignment="Top" Height="26" HorizontalContentAlignment="Left" Width="55" VerticalContentAlignment="Center"></Label>
+        <Label x:Name="GraphicsStatus" Content="DEFAULT" FontSize="10" Foreground="Lime" HorizontalAlignment="Left" Margin="66,72,0,0" VerticalAlignment="Top" Height="26" HorizontalContentAlignment="Left" Width="55" VerticalContentAlignment="Center"></Label>
 
-            <Label x:Name="JournalStatus" Content="DEFAULT" FontSize="10" Foreground="Lime" HorizontalAlignment="Left" Margin="113,10,0,0" VerticalAlignment="Top" Height="26" HorizontalContentAlignment="Left" Width="55">
-                <Label.Effect>
-                    <DropShadowEffect x:Name="JournalStatusGlow" BlurRadius="10" ShadowDepth="0" Opacity="1" Color="Lime"/>
-                </Label.Effect>
-            </Label>
-            <Label x:Name="GraphicsStatus" Content="DEFAULT" FontSize="10" Foreground="Lime" HorizontalAlignment="Left" Margin="113,34,0,0" VerticalAlignment="Top" Height="26" HorizontalContentAlignment="Left" Width="55">
-                <Label.Effect>
-                    <DropShadowEffect x:Name="GraphicsStatusGlow" BlurRadius="10" ShadowDepth="0" Opacity="1" Color="Lime"/>
-                </Label.Effect>
-            </Label>
+        <Label Content="Journals" Foreground="White" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="26" VerticalContentAlignment="Center"></Label>
+        <Label Content="Graphics" Foreground="White" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Height="26" VerticalContentAlignment="Center"></Label>
 
-            <Label Content="Journals" Foreground="White" HorizontalAlignment="Left" Margin="48,-3,0,0" VerticalAlignment="Top" Height="26">
-                <Label.Effect>
-                    <DropShadowEffect BlurRadius="10" ShadowDepth="0" Opacity="1" Color="White"/>
-                </Label.Effect>
-            </Label>
+        <Button x:Name="JournalFind" Content="Browse..." HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="113" Height="26"/>
+        <Button x:Name="GraphicsFind" Content="Browse..." HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top" Width="113" Height="26"/>
 
-            <Label Content="Graphics" Foreground="White" HorizontalAlignment="Left" Margin="48,22,0,0" VerticalAlignment="Top">
-                <Label.Effect>
-                    <DropShadowEffect BlurRadius="10" ShadowDepth="0" Opacity="1" Color="White"/>
-                </Label.Effect>
-            </Label>
-
-            <Button x:Name="JournalFind" Background="#0c0c0c" BorderBrush="#f90" Foreground="#f90" Content="..." HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="25" Height="20"/>
-            <Button x:Name="GraphicsFind" Background="#0c0c0c" BorderBrush="#f90" Foreground="#f90"  Content="..." HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Width="25" Height="20"/>
-
-            <Button x:Name="CancelBtn" Background="#0c0c0c" BorderBrush="#f90" Foreground="#f90"  Content="Close" HorizontalAlignment="Left" Margin="130,62,0,0" VerticalAlignment="Top" Width="55"/>
-            <Button x:Name="ClearBtn" Background="#0c0c0c" BorderBrush="#f90" Foreground="#f90"  Content="Clear" HorizontalAlignment="Left" Margin="70,62,0,0" VerticalAlignment="Top" Width="55"/>
-            <Button x:Name="SaveBtn" Background="#0c0c0c" BorderBrush="#f90" Foreground="#f90"  Content="Save" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top" Width="55"/>
-        </Grid>
-    </Border>
+        <Button x:Name="CancelBtn" Content="Close" HorizontalAlignment="Left" Margin="170,103,0,0" VerticalAlignment="Top" Width="70" Height="26"/>
+        <Button x:Name="ClearBtn" Content="Reset" HorizontalAlignment="Left" Margin="170,41,0,0" VerticalAlignment="Top" Width="70" Height="26"/>
+        <Button x:Name="SaveBtn" Content="Save" HorizontalAlignment="Left" Margin="170,10,0,0" VerticalAlignment="Top" Width="70" Height="26"/>
+    </Grid>
 </Window>

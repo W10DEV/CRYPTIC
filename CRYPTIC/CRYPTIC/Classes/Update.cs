@@ -15,7 +15,7 @@ namespace CRYPTIC
 
         public static void Check()
         {
-            string gitUpdate = "https://raw.githubusercontent.com/jakebilbe/Watcher/master/Update.txt";
+            string gitUpdate = "https://raw.githubusercontent.com/W10DEV/CRYPTIC/master/CRYPTIC/CRYPTIC/UpdateVersion/Update.txt";
             WebClient client = new WebClient();
             Stream stream = client.OpenRead(gitUpdate);
             StreamReader reader = new StreamReader(stream);

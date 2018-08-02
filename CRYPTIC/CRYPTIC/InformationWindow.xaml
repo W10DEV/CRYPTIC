@@ -7,11 +7,10 @@
         mc:Ignorable="d"
         Title="Watcher - Information" Height="200" Width="300" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize" AllowsTransparency="True">
     <Window.Background>
-        <SolidColorBrush Opacity="0" Color="#0c0c0c"/>
+        <SolidColorBrush Opacity="0.6" Color="#0c0c0c"/>
     </Window.Background>
-    <Border BorderBrush="#0c0c0c" Background="#0c0c0c" CornerRadius="5,5,5,5" Opacity="1" BorderThickness="1,1,1,1">
         <Grid>
-            <RichTextBox HorizontalAlignment="Left" Background="#0c0c0c" Height="138" Margin="10,10,0,0" VerticalAlignment="Top" Width="280" FontFamily="/Watcher;component/Resources/#Euro Caps" BorderThickness="0" IsReadOnly="True">
+            <RichTextBox HorizontalAlignment="Left" Background="#00000000" Height="138" Margin="10,10,0,0" VerticalAlignment="Top" Width="280" FontFamily="/Watcher;component/Resources/#Euro Caps" BorderThickness="0" IsReadOnly="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsEnabled="False">
                 <FlowDocument>
                     <Paragraph TextAlignment="Center">
                         <Run Foreground="White" Text="please note" FontWeight="Bold"/>
@@ -28,8 +27,7 @@
                     </Paragraph>
                 </FlowDocument>
             </RichTextBox>
-            <Button x:Name="CloseBtn" Content="Close" HorizontalAlignment="Left" Margin="10,153,0,0" VerticalAlignment="Top" Width="280" Height="35" Background="#0c0c0c" BorderBrush="#f90" Foreground="#f90" />
+            <Button x:Name="CloseBtn" Content="Close" HorizontalAlignment="Left" Margin="10,153,0,0" VerticalAlignment="Top" Width="280" Height="35" />
 
         </Grid>
-    </Border>
 </Window>

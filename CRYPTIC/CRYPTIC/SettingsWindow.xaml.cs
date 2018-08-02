@@ -26,14 +26,12 @@ namespace CRYPTIC
             {
                 JournalStatus.Content = "CUSTOM";
                 JournalStatus.Foreground = new SolidColorBrush(Colors.Aqua);
-                JournalStatusGlow.Color = Colors.Aqua;
             }
 
             if (Properties.Settings.Default.GraphicsLocation.Length > 0)
             {
                 GraphicsStatus.Content = "CUSTOM";
                 GraphicsStatus.Foreground = new SolidColorBrush(Colors.Aqua);
-                GraphicsStatusGlow.Color = Colors.Aqua;
             }
 
             SaveBtn.Click += SaveBtn_Click;
